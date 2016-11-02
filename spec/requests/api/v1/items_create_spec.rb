@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Items create API endpoint' do
   it 'creates an item' do
     '{"name":"mug", "description":"striped", "image_url":"http://google.com/mug"}'
-
-    post '/api/v1/items', '{"name":"mug", "description":"striped", "image_url":"http://google.com/mug"}', {format: 'json'}
+    json_data = '{"item":{"name":"mug", "description":"striped", "image_url":"http://google.com/mug"}}'
+    post '/api/v1/items', json_data, { 'CONTENT_TYPE' => 'application/json'}
 
     result = JSON.parse(response.body)
 
