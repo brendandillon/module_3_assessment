@@ -21,7 +21,7 @@
       </li>
       <li>
         <%= form_tag search_path, method: :get do %>
-          <%= text_field_tag :zip, placeholder:"ZIP Code" %>
+          <%= text_field_tag :zip, nil, placeholder:"ZIP Code" %>
           <%= submit_tag 'Search' %>
         <% end %>
       </li>

@@ -1,9 +1,9 @@
-<%= @total %> Total Stores
+<h1><%= @total %> Total Stores</h1>
 <% @stores.each do |store| %>
   <div class="store">
-    <p><%= store.long_name %></p>
+    <h3><%= store.long_name %></h3>
     <p><%= store.city %></p>
-    <p><%= store.distance %></p>
+    <p><%= store.distance %> miles away</p>
     <p><%= store.phone %></p>
     <p>Store Type: <%= store.store_type %></p>
   </div>
