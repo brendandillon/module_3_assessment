@@ -10,7 +10,7 @@ RSpec.describe 'A user searches for their zip code' do
       expect(current_path).to eq('/search')
       expect(page).to have_content('17 Total Stores')
       expect(page).to have_css('.store', count: 15)
-      within ('.store:first') do
+      within ('.store:first-of-type') do
         expect(page).to have_content("Best Buy Mobile - Cherry Creek Shopping Center")
         expect(page).to have_content("Denver")
         expect(page).to have_content("3.25")
