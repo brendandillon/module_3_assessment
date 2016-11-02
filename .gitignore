@@ -21,3 +21,5 @@
 
 /spec/fixtures
 /spec/examples.txt
+
+.byebug_history

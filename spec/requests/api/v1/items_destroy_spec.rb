@@ -7,9 +7,7 @@ RSpec.describe 'Items destroy API endpoint' do
 
     delete "/api/v1/items/#{item1.id}"
 
-    result = JSON.parse(response.body)
-
     expect(response.status).to eq(204)
-    expect(Item.find(item1.id)).to eq(nil)
+    expect(Item.find_by_id(item1.id)).to eq(nil)
   end
 end
