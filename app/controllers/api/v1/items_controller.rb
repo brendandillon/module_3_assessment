@@ -1,4 +1,5 @@
 class Api::V1::ItemsController < ApplicationController
+  protect_from_forgery except: :create
   def index
     @items = Item.all
     render json: @items
