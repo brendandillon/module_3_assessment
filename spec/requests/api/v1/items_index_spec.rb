@@ -7,10 +7,10 @@ RSpec.describe 'Items index API endpoint' do
 
     get '/api/v1/items'
 
-    result = JSON.parse(response)
+    result = JSON.parse(response.body)
 
-    expect(result.status).to eq(200)
-    expect(result.body).to eq([{"id" => item1.id, "name" => "mug", "description" => "striped", "image_url" => "http://google.com/mug"},
-                               {"id" => item2.id, "name" => "table", "description" => "wooden", "image_url" => "http://flickr.com/table"}])
+    expect(response.status).to eq(200)
+    expect(result).to eq([{"id" => item1.id, "name" => "mug", "description" => "striped", "image_url" => "http://google.com/mug"},
+                          {"id" => item2.id, "name" => "table", "description" => "wooden", "image_url" => "http://flickr.com/table"}])
   end
 end

@@ -11,6 +11,7 @@ gem "jbuilder", "~> 2.0"
 gem "faker"
 gem "therubyracer"
 gem "less-rails-bootstrap"
+gem "active_model_serializers"
 
 gem 'figaro'
 gem 'faraday'
